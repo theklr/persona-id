@@ -18,10 +18,13 @@ namespace Persona.Controllers
             return View();
         }
 
+
         public ActionResult Verfication()
         {
             return View();
         }
+
+
         public ActionResult Confirmation()
         {
             return View();
