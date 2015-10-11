@@ -193,6 +193,7 @@
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\Api\UserApiController.cs" />
+    <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -204,9 +205,9 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Request\LoginPostRequest.cs" />
     <Compile Include="Models\Request\RegistrationAddRequest.cs" />
-    <Compile Include="Models\Responses\BaseResponse.cs" />
-    <Compile Include="Models\Responses\ErrorResponse.cs" />
-    <Compile Include="Models\Responses\SuccessResponse.cs" />
+    <Compile Include="Models\Response\BaseResponse.cs" />
+    <Compile Include="Models\Response\ErrorResponse.cs" />
+    <Compile Include="Models\Response\SuccessResponse.cs" />
     <Compile Include="Models\ViewModels\BaseViewModel.cs" />
     <Compile Include="Models\ViewModels\ItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -480,10 +481,12 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\js\.DS_Store" />
     <Content Include="Views\AboutUs\AboutUs.cshtml" />
-    <Content Include="Views\DocPortfolio\index.cshtml" />
-    <Content Include="Views\DocVerification\index.cshtml" />
     <Content Include="Views\PersonaId\index.cshtml" />
     <Content Include="Views\Help\NeedHelp.cshtml" />
+    <Content Include="Views\Doc\Index.cshtml" />
+    <Content Include="Views\Doc\Portfolio.cshtml" />
+    <Content Include="Views\Doc\Verfication.cshtml" />
+    <Content Include="Views\Doc\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
