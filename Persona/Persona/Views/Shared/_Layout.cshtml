@@ -1,44 +1,120 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <title>Persona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content="A responsive website template made exclusively by themeum">
+    <meta name="author" content="themeum">
 
-</head>
+    <!-- FAVICON -->
+
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Header scripts -->
+    <script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="js/queryloader2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="~/Scripts/angular.js"></script>
+
+
+    <!-- =========================
+       Preloader
+    ============================== -->
+    <script type="text/javascript" src="~/Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="~/Scripts/angular-route.js"></script>
+    
+    <script>
+	    window.addEventListener('DOMContentLoaded', function() {
+	        "use strict";
+	        new QueryLoader2(document.querySelector("body"), {
+	            barColor: "#e64e3e",
+	            backgroundColor: "#fff",
+	            percentage: true,
+	            barHeight: 1,
+	            minimumTime: 200,
+	            fadeOutTime: 1000
+	        });
+	    });
+    </script>
+</head> <!-- head -->
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- ============== start wrapper  ============== -->
+    <div id="wrapper">
+        <!-- main-nav -->
+        <div class="main-nav container">
+            <div class="logo-left">
+                <a href="~/Home/Index" class="pull-left">
+                    <img class="responsive-img" src="~/Content/img/logo/PERSONA (1).png" alt="logo">
+                </a>
+
+                <a href="javascript:void(0)" class="menu-trigger">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="languages">
+                <ul class="list-inline">
+                    <li class="active"><a href="#">EN</a></li>
+                    <li class="disabled"><a href="#">SP</a></li>
+                    <li class=""><a href="#" class="btn btn-2 btn-primary btn-main">Feedback</a></li>
+                </ul>
+            </div>
+        </div> <!-- //end main-nav -->
+        <!--=========================
+            Start area for Menu
+        ============================== -->
+        <nav class="nav-menu">
+            <div class="nav-header overflow">
+                <a href="index.cshtml"><img src="~/Content/img/logo/PERSONA (1).png" class="pull-left" alt="logo"></a>
+                <p class="dismiss-button pull-right animated zoomIn">
+                    <img src="img/dismiss.png" alt="dismiss">
+                </p>
+            </div>
+            <ul>
+                <li class="active"><a href="~/Home/Index">Home <span class="info animated fadeInRight">Persona.  A connected identity for the universal citizen.</span></a></li>
+                <li><a href="~/AboutUs/AboutUs">About <span class="info animated fadeInRight">We are a digital safety deposit box where you can keep all your important documents.  Digitally uploaded, verified, and stored.</span></a></li>
+                <li><a href="~/DocVerification/index">Document Verification <span class="info animated fadeInRight">Upload your documents for verification.</span></a></li>
+                <li><a href="~/DocPortfolio/index">Document Portfolio <span class="info animated fadeInRight">View your collection of verifed documents.</span></a></li>
+                <li><a href="~/PersonaId/index">Persona Id <span class="info animated fadeInRight">View your Persona Id.</span></a></li>
+                <li><a href="~/Help/NeedHelp">Help <span class="info animated fadeInRight">Contact us if you need help with Persona.</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- End of menu area -->
+        @RenderBody() 
+
+    </div> <!-- //end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- animation effects -->
+    <script src="js/wow.min.js"></script>
+    <!-- count-down -->
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- content slider -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- lightbox -->
+    <script src="js/lightbox.min.js"></script>
+    <!-- smooth scrool -->
+    <script src="js/smoothscroll.js"></script>
+    <!-- custom js -->
+    <script src="js/app.js"></script>
+
 </body>
 </html>
