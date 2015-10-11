@@ -25,10 +25,10 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- Header scripts -->
-    <script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script>
-    <script type="text/javascript" src="js/queryloader2.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="~/Scripts/angular.js"></script>
+    <script type="text/javascript" src="js/modernizr-2.8.3.min.js" async></script>
+    <script type="text/javascript" src="js/queryloader2.min.js" async defer></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.1.4.js" async defer></script>
+    <script type="text/javascript" src="~/Scripts/angular.js" async defer></script>
 
 
     <!-- =========================
@@ -95,7 +95,10 @@
         </nav>
 
         <!-- End of menu area -->
-        @RenderBody()
+        <section>
+            @RenderBody()
+        </section>
+  
 
     </div> <!-- //end wrapper -->
 
