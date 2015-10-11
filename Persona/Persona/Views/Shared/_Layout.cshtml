@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Persona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A responsive website template made exclusively by themeum">
-    <meta name="author" content="themeum">
+    <meta name="description" content="Where virtual meets reality">
+    <meta name="author" content="Sabio.la">
 
     <!-- FAVICON -->
 
@@ -24,7 +24,6 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-
     <!-- Header scripts -->
     <script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script>
     <script type="text/javascript" src="js/queryloader2.min.js"></script>
@@ -35,9 +34,9 @@
     <!-- =========================
        Preloader
     ============================== -->
-    <script type="text/javascript" src="~/Scripts/angular-animate.js"></script>
-    <script type="text/javascript" src="~/Scripts/angular-route.js"></script>
-    
+    <script type="text/javascript" src="~/Scripts/angular-animate.js" async></script>
+    <script type="text/javascript" src="~/Scripts/angular-route.js" async></script>
+
     <script>
 	    window.addEventListener('DOMContentLoaded', function() {
 	        "use strict";
@@ -59,28 +58,28 @@
         <!-- main-nav -->
         <div class="main-nav container">
             <div class="logo-left">
-                <a href="~/Home/Index" class="pull-left">
-                    <img class="responsive-img" src="~/Content/img/logo/PERSONA (1).png" alt="logo">
-                </a>
+                @Html.ActionLink("Persona", "Index", "Home", new { @class = "navbar-brand" })
+                @*<img class="responsive-img" src="~/Content/img/logo/PERSONA (1).png" alt="logo">*@
+
 
                 <a href="javascript:void(0)" class="menu-trigger">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-            <div class="languages">
+            @*<div class="languages">
                 <ul class="list-inline">
                     <li class="active"><a href="#">EN</a></li>
                     <li class="disabled"><a href="#">SP</a></li>
                     <li class=""><a href="#" class="btn btn-2 btn-primary btn-main">Feedback</a></li>
                 </ul>
-            </div>
+            </div>*@
         </div> <!-- //end main-nav -->
         <!--=========================
             Start area for Menu
         ============================== -->
         <nav class="nav-menu">
             <div class="nav-header overflow">
-                <a href="index.cshtml"><img src="~/Content/img/logo/PERSONA (1).png" class="pull-left" alt="logo"></a>
+                <a href="index.cshtml"><img src="~/Content/img/logo/PERSONA (1).png" class="img-responsive pull-left" alt="logo"></a>
                 <p class="dismiss-button pull-right animated zoomIn">
                     <img src="img/dismiss.png" alt="dismiss">
                 </p>
@@ -96,7 +95,7 @@
         </nav>
 
         <!-- End of menu area -->
-        @RenderBody() 
+        @RenderBody()
 
     </div> <!-- //end wrapper -->
 
