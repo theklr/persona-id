@@ -57,6 +57,14 @@
       <HintPath>..\packages\AWSSDK.2.3.52.0\lib\net45\AWSSDK.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AWSSDK.CodeDeploy, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.CodeDeploy.3.1.0.2\lib\net45\AWSSDK.CodeDeploy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.1.2.1\lib\net45\AWSSDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MessagingToolkit.Barcode, Version=1.7.0.1, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=x86">
       <HintPath>..\packages\MessagingToolkit.Barcode.1.7.0.2\lib\net40\WPF\x86\MessagingToolkit.Barcode.dll</HintPath>
       <Private>True</Private>
@@ -354,6 +362,7 @@
     <Content Include="Content\img\slider\02.jpg" />
     <Content Include="Content\img\slider\03.jpg" />
     <Content Include="Content\img\slider\bg.jpg" />
+    <Content Include="Content\img\touch_id-250x390.jpg" />
     <Content Include="Content\img\work\01.jpg" />
     <Content Include="Content\img\work\02.jpg" />
     <Content Include="Content\img\work\03.jpg" />
@@ -526,7 +535,6 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\js\.DS_Store" />
     <Content Include="Views\AboutUs\AboutUs.cshtml" />
-    <Content Include="Views\PersonaId\index.cshtml" />
     <Content Include="Views\Help\NeedHelp.cshtml" />
     <Content Include="Views\Doc\Index.cshtml" />
     <Content Include="Views\Doc\Portfolio.cshtml" />
