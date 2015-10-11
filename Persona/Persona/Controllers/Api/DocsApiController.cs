@@ -9,13 +9,13 @@ using Amazon.S3;
 using Amazon.S3.Transfer;
 using Persona.Services;
 using Persona.Models.Response;
+using Persona.Models.Request;
 
 namespace Persona.Controllers.Api
 {
     [RoutePrefix("api/fileupload")]
     public class DocsApiController : ApiController
     {
-
         [Route, HttpPost]
         public HttpResponseMessage Post()
         {
@@ -45,8 +45,8 @@ namespace Persona.Controllers.Api
         {
             HttpResponseMessage result = null;
             HttpRequest httpRequest = HttpContext.Current.Request;
-            TransferUtility fileTransferUtility = new TransferUtility(new AmazonS3Client(ConfigService.cs.AwsAccessKeyId
-                                , ConfigService.cs.AwsSecretAccessKey
+            TransferUtility fileTransferUtility = new TransferUtility(new AmazonS3Client(ConfigService.AwsAccessKeyId
+                                , ConfigService.AwsSecretAccessKey
                                 , Amazon.RegionEndpoint.USWest2));
 
             if (httpRequest.Files.Count > 0)
@@ -57,10 +57,10 @@ namespace Persona.Controllers.Api
 
                     string guid = Guid.NewGuid().ToString();
 
-                    string remoteFilePath = ConfigService.cs.RemoteFilePath + guid + "_" + postedFile.FileName;
+                    string remoteFilePath = ConfigService.RemoteFilePath + guid + "_" + postedFile.FileName;
                     TransferUtilityUploadRequest fileTransferUtilityRequest = new TransferUtilityUploadRequest
                     {
-                        BucketName = ConfigService.cs.BucketName,
+                        BucketName = ConfigService.BucketName,
                         //FilePath = filePath,
                         InputStream = postedFile.InputStream,
                         //StorageClass = S3StorageClass.ReducedRedundancy,
@@ -97,7 +97,6 @@ namespace Persona.Controllers.Api
             return result;
 
         }
-
 
         //PHOTO GALLERY UPLOAD
         [Route("gallery"), HttpPost]
@@ -192,7 +191,13 @@ namespace Persona.Controllers.Api
 
                     ItemResponse<string> response = new ItemResponse<string>();
 
-                    
+                    //PhotosAdd model = new PhotosAdd(); //model binding by hand. creating a new instance of the model w/ file uploads
+
+                    //model.userId = _usersService.GetCurrentUserId();
+                    // model.URL = paraRemoteFilePath;
+
+                    //PhotosService.PhotosInsert(model);
+
                     response.Item = remoteFilePath;
 
                     return Request.CreateResponse(HttpStatusCode.Created, response);
