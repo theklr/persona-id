@@ -25,8 +25,8 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- Header scripts -->
-    <script type="text/javascript" src="js/modernizr-2.8.3.min.js"></script>
-    <script type="text/javascript" src="js/queryloader2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/queryloader2.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="~/Scripts/angular.js"></script>
 
@@ -79,9 +79,9 @@
         ============================== -->
         <nav class="nav-menu">
             <div class="nav-header overflow">
-                <a href="index.cshtml"><img src="~/Content/img/logo/PERSONA (1).png" class="img-responsive pull-left" alt="logo"></a>
+                <a href="index.cshtml"><img src="~/Content/img/logo/PERSONA (1).png" class="~/Content/img-responsive pull-left" alt="logo"></a>
                 <p class="dismiss-button pull-right animated zoomIn">
-                    <img src="img/dismiss.png" alt="dismiss">
+                    <img src="~/Content/img/dismiss.png" alt="dismiss">
                 </p>
             </div>
             <ul>
@@ -98,22 +98,26 @@
         @RenderBody()
 
     </div> <!-- //end wrapper -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/js/wow.min.js"></script>
     <!-- animation effects -->
-    <script src="js/wow.min.js"></script>
+    
     <!-- count-down -->
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="~/Scripts/js/jquery.inview.min.js"></script>
+
+    <script src="~/Scripts/js/jquery.counterup.min.js"></script>
+    
     <!-- content slider -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="~/Scripts/js/owl.carousel.min.js"></script>
     <!-- lightbox -->
-    <script src="js/lightbox.min.js"></script>
+    <script src="~/Scripts/js/lightbox.min.js"></script>
     <!-- smooth scrool -->
-    <script src="js/smoothscroll.js"></script>
+    <script src="~/Scripts/js/smoothscroll.js"></script>
     <!-- custom js -->
-    <script src="js/app.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
 
 </body>
 </html>
