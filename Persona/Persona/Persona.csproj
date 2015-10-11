@@ -217,6 +217,7 @@
     <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PersonaIdController.cs" />
     <Compile Include="Domain\Photo.cs" />
     <Compile Include="Enum\EmploymentType.cs" />
     <Compile Include="Enum\GenderType.cs" />
@@ -324,6 +325,7 @@
     <Content Include="Content\img\logo\PERSONAjpg_01.jpg" />
     <Content Include="Content\img\logo\PERSONAjpg_02.jpg" />
     <Content Include="Content\img\logo\PERSONA %281%29.png" />
+    <Content Include="Content\img\logo\Screenshot 2015-10-11 15.40.50.png" />
     <Content Include="Content\img\portfolio\01.jpg" />
     <Content Include="Content\img\portfolio\02.jpg" />
     <Content Include="Content\img\portfolio\03.jpg" />
