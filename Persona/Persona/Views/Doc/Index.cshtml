@@ -4,22 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-
-
-    <style>
-        #style {
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-    </style>
 
 
 
 
 <section>
-    <div class="container" id="documentAdd">
+    <div class="container" id="documentAdd" style="background-color:#598383 ">
         <form id="frmContact" role="form" method="post" novalidate="novalidate">
             <div class="col-md-4 col-md-offset-3">
                 
@@ -27,10 +18,8 @@
                     <label for="certificates">BioMetrics and Digital Birth Certificate</label>
                     <select name="certificates" id="certificates" class="form-control">
                         <option value=""></option>
-                        <option value="1">Sample 1</option>
-                        <option value="2">Sample 2</option>
-                        <option value="3">Sample 3</option>
-                        <option value="4">Sample 4</option>
+                        <option value="1">DNA</option>
+                        <option value="2">Imunization</option>
                         <option value="6">Other</option>
                     </select>
                 </div>
@@ -38,10 +27,9 @@
                     <label for="records">Public Records and Bills</label>
                     <select name="records" id="records" class="form-control">
                         <option value=""></option>
-                        <option value="1">Record 1</option>
-                        <option value="2">Record 2</option>
-                        <option value="3">Record 3</option>
-                        <option value="4">Record 4</option>
+                        <option value="1">Bills</option>
+                        <option value="2">Medical Insurance Card</option>
+                        <option value="3">School Record 3</option>
                         <option value="6">Other</option>
                     </select>
                 </div>
@@ -49,10 +37,9 @@
                     <label for="docs">Legal Documents</label>
                     <select name="docs" id="docs" class="form-control">
                         <option value=""></option>
-                        <option value="1">Document 1</option>
-                        <option value="2">Document 2</option>
-                        <option value="3">Document 3</option>
-                        <option value="4">Document 4</option>
+                        <option value="1">Will</option>
+                        <option value="2">Deed</option>
+                        <option value="3">Marriage Certificate</option>
                         <option value="6">Other</option>
                     </select>
                 </div>
@@ -80,6 +67,7 @@
             $("#cmdDocumentsAddSubmit").on("click", sabio.page.handlers.documentsFormSubmitClicked);
 
         };
+
 
         sabio.page.documentsFormValidation = function () {
             sabio.page.validatorDefault();
@@ -165,7 +153,6 @@
         }
 
 
-
         sabio.page.ajaxSuccessPut = function (data, status, xhr) {
 
 
@@ -175,8 +162,6 @@
             }
 
         }
-
-
 
 
         sabio.page.ajaxSuccessGet = function (data, status, xhr) {

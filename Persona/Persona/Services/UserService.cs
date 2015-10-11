@@ -111,5 +111,10 @@ namespace Persona.Services
             return result;
         }
 
+        public static string GetCurrentUserId()
+        {
+            return HttpContext.Current.User.Identity.GetUserId();
+        }
+
     }
 }

@@ -210,12 +210,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\QRAPIController.cs" />
+    <Compile Include="Controllers\Api\DocsApiController.cs" />
     <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\Api\UserApiController.cs" />
     <Compile Include="Controllers\DocAddImageController.cs" />
     <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Domain\Photo.cs" />
     <Compile Include="Enum\EmploymentType.cs" />
     <Compile Include="Enum\GenderType.cs" />
     <Compile Include="Enum\MaritalType.cs" />
@@ -230,9 +232,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Request\LoginPostRequest.cs" />
+    <Compile Include="Models\Request\PhotoPrimaryUpdate.cs" />
+    <Compile Include="Models\Request\PhotosAdd.cs" />
     <Compile Include="Models\Request\RegistrationAddRequest.cs" />
     <Compile Include="Models\Response\BaseResponse.cs" />
     <Compile Include="Models\Response\ErrorResponse.cs" />
+    <Compile Include="Models\Response\ItemResponse.cs" />
     <Compile Include="Models\Response\SuccessResponse.cs" />
     <Compile Include="Models\ViewModels\BaseViewModel.cs" />
     <Compile Include="Models\ViewModels\ItemViewModel.cs" />
@@ -241,6 +246,10 @@
     <Compile Include="Providers\SqlDao.cs" />
     <Compile Include="Sabio\DataProvider.cs" />
     <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\ConfigService.cs" />
+    <Compile Include="Services\FileUploadService.cs" />
+    <Compile Include="Services\PhotosService.cs" />
+    <Compile Include="Services\ProfileService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Util\QRCodeDecoder.cs" />
@@ -384,6 +393,7 @@
     <Content Include="favicons\ms-icon-150x150.png" />
     <Content Include="favicons\ms-icon-310x310.png" />
     <Content Include="favicons\ms-icon-70x70.png" />
+    <Content Include="favicons\personaFavicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
