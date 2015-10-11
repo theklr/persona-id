@@ -217,6 +217,7 @@
     <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Domain\Photo.cs" />
     <Compile Include="Enum\EmploymentType.cs" />
     <Compile Include="Enum\GenderType.cs" />
     <Compile Include="Enum\MaritalType.cs" />
@@ -246,6 +247,7 @@
     <Compile Include="Sabio\DataProvider.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ConfigService.cs" />
+    <Compile Include="Services\FileUploadService.cs" />
     <Compile Include="Services\PhotosService.cs" />
     <Compile Include="Services\ProfileService.cs" />
     <Compile Include="Services\UserService.cs" />
@@ -391,6 +393,7 @@
     <Content Include="favicons\ms-icon-150x150.png" />
     <Content Include="favicons\ms-icon-310x310.png" />
     <Content Include="favicons\ms-icon-70x70.png" />
+    <Content Include="favicons\personaFavicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
