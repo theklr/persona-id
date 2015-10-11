@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <title>Persona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A responsive website template made exclusively by themeum">
-    <meta name="author" content="themeum">
+    <meta name="description" content="A Digital Safety Deposit Box">
+    <meta name="author" content="Mi Dinero mi futro con Sabio.la">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="~/favicons/favicon.ico">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
 
     <!-- CSS -->
-  
+
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/css/animate.min.css">
     <link rel="stylesheet" href="~/css/responsive.css">
     <link rel="stylesheet" href="~/css/lightbox.css">
     <link rel="stylesheet" href="~/css/main.css">
-
+    @RenderSection("Style", false);
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -32,22 +32,23 @@
        Preloader
     ============================== -->
     <script>
-	    window.addEventListener('DOMContentLoaded', function() {
-	        "use strict";
-	        new QueryLoader2(document.querySelector("body"), {
-	            barColor: "#e64e3e",
-	            backgroundColor: "#fff",
-	            percentage: true,
-	            barHeight: 1,
-	            minimumTime: 200,
-	            fadeOutTime: 1000
-	        });
-	    });
+        window.addEventListener('DOMContentLoaded', function () {
+            "use strict";
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#e64e3e",
+                backgroundColor: "#fff",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 200,
+                fadeOutTime: 1000
+            });
+        });
     </script>
 </head> <!-- head -->
 <body>
-    
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>
 
 
     <!-- ============== Start footer ============== -->
@@ -56,7 +57,7 @@
             <div class="container mtb50">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 text-center">
-                 
+
                         <ul class="social-icon-footer list-inline">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -82,7 +83,7 @@
         </div> <!-- //end copyright -->
     </section>
     <!-- ========= //End footer ========= -->
-        
+
 
     <script src="~/Scripts/js/jquery.min.js"></script>
 
@@ -103,6 +104,7 @@
     <script src="~/Scripts/js/smoothscroll.js"></script>
     <!-- custom js -->
     <script src="~/Scripts/js/app.js"></script>
+    @RenderSection("scripts", false);
 
 </body>
 </html>
