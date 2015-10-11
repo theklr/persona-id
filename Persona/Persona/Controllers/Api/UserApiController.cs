@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Persona.Models;
 using Persona.Models.Request;
 using Persona.Models.Responses;
 using Persona.Providers;
@@ -53,6 +54,57 @@ namespace Persona.Controllers.Api
 
             }
 
+
+        }
+
+
+
+        [Route("login"), HttpPost]
+        public HttpResponseMessage LoginPost(LoginPostRequest model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            }
+
+            try
+            {
+                BaseResponse response = null;
+
+                HttpStatusCode code = HttpStatusCode.OK;
+
+                ApplicationUser user = UserService.Signin(model.UserName, model.Password);
+
+                if (user != null)
+                {
+                    response = new SuccessResponse();
+                    HttpResponseMessage resp = Request.CreateResponse(response);
+
+                    //ResetClientState(user.Id, resp);
+
+                    return resp;
+
+                }
+                else
+                {
+                    response = new ErrorResponse("Unable to Log in");
+                    code = HttpStatusCode.BadRequest;
+
+                }
+
+                return Request.CreateResponse(code, response);
+
+            }
+
+            catch (Exception e)
+            {
+                ErrorResponse er = new ErrorResponse(e.Message);
+
+                //sabio.layout.showMessage(er);
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, er);
+
+            }
 
         }
 
