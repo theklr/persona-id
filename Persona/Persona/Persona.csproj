@@ -193,6 +193,7 @@
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\Api\UserApiController.cs" />
+    <Compile Include="Controllers\DocAddImageController.cs" />
     <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -393,6 +394,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dropzone.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -444,6 +446,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Services\sabio.services.accounts.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Shared\_Layout.cshtml">
       <SubType>Code</SubType>
@@ -488,6 +491,7 @@
     <Content Include="Views\Doc\Portfolio.cshtml" />
     <Content Include="Views\Doc\Verfication.cshtml" />
     <Content Include="Views\Doc\Confirmation.cshtml" />
+    <Content Include="Views\DocAddImage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
