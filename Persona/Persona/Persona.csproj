@@ -299,6 +299,8 @@
     <Content Include="Content\img\logo-header.png" />
     <Content Include="Content\img\logo-nav.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\logo\PERSONAjpg_01.jpg" />
+    <Content Include="Content\img\logo\PERSONAjpg_02.jpg" />
     <Content Include="Content\img\logo\PERSONA %281%29.png" />
     <Content Include="Content\img\portfolio\01.jpg" />
     <Content Include="Content\img\portfolio\02.jpg" />
@@ -506,6 +508,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\logo\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
