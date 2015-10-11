@@ -72,7 +72,7 @@ namespace Persona.Controllers
             {
                 return View(model);
             }
-            return RedirectToAction("Index", "DocAddImage");
+            return RedirectToAction("Index", "Doc");
            
 
             // This doesn't count login failures towards account lockout

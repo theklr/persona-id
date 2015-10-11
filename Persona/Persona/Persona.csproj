@@ -352,6 +352,7 @@
     <Content Include="Content\img\slider\02.jpg" />
     <Content Include="Content\img\slider\03.jpg" />
     <Content Include="Content\img\slider\bg.jpg" />
+    <Content Include="Content\img\touch_id-250x390.jpg" />
     <Content Include="Content\img\work\01.jpg" />
     <Content Include="Content\img\work\02.jpg" />
     <Content Include="Content\img\work\03.jpg" />
@@ -524,7 +525,6 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\js\.DS_Store" />
     <Content Include="Views\AboutUs\AboutUs.cshtml" />
-    <Content Include="Views\PersonaId\index.cshtml" />
     <Content Include="Views\Help\NeedHelp.cshtml" />
     <Content Include="Views\Doc\Index.cshtml" />
     <Content Include="Views\Doc\Portfolio.cshtml" />
